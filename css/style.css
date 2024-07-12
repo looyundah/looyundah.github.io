@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'LooDreamFont';
+    src: url('/assets/fonts/FontsFree-Net-Dream-Avenue.ttf') format('truetype');
+}
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    scroll-snap-type: y mandatory;
+}
+section{
+    scroll-snap-align: start;
+}
+#front{
+    position: relative;
+    height: 100vh;
+    display: flex;
+}
+#front-background{
+    width: 45%;
+    height: 100%;
+}
+#front-background img{
+    width: 100%;
+    height: 100%;
+}
+#front-title{
+    width: 65%;
+    text-align: center;
+    height: 100%;
+    font-family: 'LooDreamFont', sans-serif;
+    font-size: 50px;
+}
+#front-pop{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    display: flex;
+}
+#front-pop-image{
+    width: 150px;
+    height: 150px;
+}
+#front-pop-image img{
+    width: 100%;
+    height: 100%;
+}
+#front-pop-artist{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0px 16px;
+}
+#front-pop-artist #front-pop-work{
+    font-size: 18px;
+    color: grey;
+}
+#front-pop-music-icons a{
+    display: inline-block;
+    margin: 0px 3px;
+}
+#front-pop-music-icons img{
+    width: 25px;
+}
+#front-pop-music-icons #spotify-icon{
+    width: 30px;
+}
+#front-pop-music-icons #apple-music-icon{
+    width: 23px;
+}
+#middle{
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+#middle-image, #middle-section{
+    width: 50%;
+}
+#middle-image img{
+    width: 100%;
+    height: 100%;
+}
+#middle-section{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#middle-section span{
+    font-size: 30px;
+}
+#anthology{
+    min-height: 100vh;
+    padding: 20px 0;
+}
+#anthology h1{
+    font-family: 'LooDreamFont', sans-serif;
+    font-size: 30px;
+    margin: 10px 0;
+}
+#anthology-container{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#anthology-container .narrative{
+    width: 300px;
+    margin: 15px;
+}
+#anthology-container .narrative img{
+    width: inherit;
+    height: 300px;
+}
+#anthology-container .narrative span{
+    display: block;
+    padding: 10px 0;
+    font-size: 14px;
+    border-bottom: 2px solid white;
+    font-family: 'LooDreamFont', sans-serif;
+}
+#anthology-container .narrative .narrative-title{
+    font-size: 25px;
+    
+}
+#anthology-container .narrative .narrative-date{
+    border: none;
+}
+
+
+@media screen and (max-width: 800px){
+    #front-background{
+        width: 100%;
+    }
+    #front-title{
+        width: 100%;
+        background-color: rgba(0,0,0,0.9);
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        font-size: 40px;
+        z-index: 0;
+    }
+    #front-pop{
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        top: 0;
+        left: 0;
+        /* transform: translate(-50%, -50%);*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #front-pop-image{
+        width: 300px;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+    #front-pop-artist{
+        line-height: 40px;
+    }
+    #front-pop-artist #tag{
+        text-align: center;
+        font-size: 25px;
+        margin: 20px 0;
+    }
+    #front-pop-artist #front-pop-music-icons{
+        text-align: center;
+    }
+    #front-pop-artist #front-pop-music-icons a{
+        margin: 10px 15px;
+    }
+    #middle{
+        position: relative;
+    }
+    #middle-image{
+        width: 100%;
+    }
+    #middle-section{
+        background-color: rgba(0,0,0,0.8);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
